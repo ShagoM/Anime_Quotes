@@ -1,0 +1,22 @@
+<div class="mt-2 mb-2" style="width: 18rem;">
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-outline-success">Add</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-danger">Delete All</button>
+        </div>
+    </div>
+
+</div>
+
+<div class="card" style="width: 18rem;" *ngIf="quoteData">
+  <div class="card-body">
+    <h5 class="card-title">{{ quoteData.character }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ quoteData.anime }} </h6>
+    <hr>
+    <p class="card-text">{{ quoteData.quote }}</p>
+    <button type="button" class="btn btn-danger" (click)="deleteQuotes()">Delete</button>
+  </div>
+</div>
+
