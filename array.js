@@ -1,3 +1,4 @@
+// Prueba de transpilación
 var ArrayClass = /** @class */ (function () {
     function ArrayClass() {
         this.myArray = [1, 2, 3, 4, 5];
