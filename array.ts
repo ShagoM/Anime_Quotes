@@ -1,3 +1,5 @@
+// Prueba de transpilación
+
 class ArrayClass {
     private myArray: Array<number> =  [1,2,3,4,5];
     constructor() {
@@ -69,6 +71,7 @@ const santiObject: santi = {
     documento: 1000345435,
 }
 var datoQueQuiero: datosDelSanti;
+
 if(datoQueQuiero == 'documento') {
     console.log(santiObject.documento);
 }else if(datoQueQuiero == 'nombre') {
