@@ -9,9 +9,9 @@ import { InformationService } from 'src/app/shared/services/information.service'
 })
 export class QuotesShowComponent {
 
-  quoteData: Quote;
+  
   quotesArray: Quote[] = [];
-  // quotesArrayDos: Array<Quote>; 
+
 
   constructor(private informationService: InformationService) { 
     this.getQuote();
@@ -21,19 +21,11 @@ export class QuotesShowComponent {
 
     this.informationService.getAnimequotes().subscribe(data => {
       this.quotesArray.push(data);
-      this.quoteData = this.quotesArray[0];
-      console.log(this.quotesArray);
 
-      
     });
   }
 
-  deleteQuotes(){
-    
-    console.log("nada");
-    
-      
-  }
+
      
   
 
