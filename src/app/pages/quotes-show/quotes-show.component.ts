@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component } from '@angular/core';
 import { Quote } from 'src/app/shared/models/quote.model';
 import { InformationService } from 'src/app/shared/services/information.service';
 
@@ -10,23 +9,23 @@ import { InformationService } from 'src/app/shared/services/information.service'
 })
 export class QuotesShowComponent {
 
-  quoteData: Quote
+  
+  quotesArray: Quote[] = [];
+
 
   constructor(private informationService: InformationService) { 
-
-    this.informationService.getAnimequotes().subscribe(data => {
-      this.quoteData = data;
-    });
-
-
-    
+    this.getQuote();
   }
 
-  deleteQuotes(){
+  getQuote() {
 
-    console.log("nada");
-    
-      }
+    this.informationService.getAnimequotes().subscribe(data => {
+      this.quotesArray.push(data);
+
+    });
+  }
+
+
      
   
 

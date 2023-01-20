@@ -17,7 +17,7 @@ export class InformationService {
 
   constructor(private http: HttpClient) {}
 
-  getAnimequotes() {    
+  getAnimequotes(): Observable<Quote> {    
     return this.http.get<Quote>(this.api_personajes);
   }
  
