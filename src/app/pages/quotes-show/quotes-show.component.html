@@ -12,7 +12,7 @@
 
   <h5 *ngIf="!quotesArray.length">No hay frases</h5>
 
-  <div class="card" style="width: 18rem; margin-top: 10px;" *ngFor="let quoteArray of quotesArray; index as index"  >
+  <div class="card" style="width: 18rem; margin-top: 10px; margin-left:10px ; display: inline-block;" *ngFor="let quoteArray of quotesArray; index as index" >
     <div class="card-body">
       <h5 class="card-title">{{ quoteArray.character }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ quoteArray.anime }} </h6>
@@ -20,7 +20,7 @@
       <p class="card-text">{{ quoteArray.quote }}</p>
       <button type="button" class="btn btn-danger" (click)="deleteQuote(index)">Delete</button>
     </div>
-  </div>
+  </div>  
 
 
 
