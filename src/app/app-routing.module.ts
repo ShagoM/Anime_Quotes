@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'show-random', loadChildren: () => import('./pages/quotes-show/quotes-show.module').then(m => m.QuotesShowModule) },
+  { path: 'quotes-anime', loadChildren: () => import('./pages/quotes-anime/quotes-anime.module').then(m => m.QuotesAnimeModule) },
   { path: '**', redirectTo:'show-random' }
 ];
 
