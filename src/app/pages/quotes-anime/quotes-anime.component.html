@@ -1,0 +1,38 @@
+<div class="mt-2 mb-2" style="width: 18rem;">
+    
+    <div class="row">
+        <div class="input-group mb-3">
+
+            <form [formGroup]="formulario" (ngSubmit)="getQuote()">
+                <input type="text" class="form-control" placeholder="Ingresa un Anime" formControlName="buscador">
+                <div class="input-group-append">
+                    <button style="margin-top: 10px;" class="btn btn-outline-primary" type="submit">Buscar</button>
+                </div>
+            </form>
+
+
+
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-success" (click)="getQuote()" *ngIf="quotesArray.length">Add</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-outline-danger" (click)="deleteAllQuotes()" *ngIf="quotesArray.length">Delete All</button>
+        </div>
+    </div>
+</div>
+
+<h5 *ngIf="!quotesArray.length">No hay frases</h5>
+
+  <div class="card" style="width: 18rem; margin-top: 10px; margin-left:10px ; display: inline-block;" *ngFor="let quoteArray of quotesArray; index as index" >
+    <div class="card-body">
+      <h5 class="card-title">{{ quoteArray.character }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ quoteArray.anime }} </h6>
+      <hr>
+      <p class="card-text">{{ quoteArray.quote }}</p>
+      <button type="button" class="btn btn-danger" (click)="deleteQuote(index)">Delete</button>
+    </div>
+  </div>  
+
+
+
