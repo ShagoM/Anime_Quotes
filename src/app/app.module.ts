@@ -5,9 +5,11 @@ import { AppComponent } from './app.component';
 import { InformationService } from './shared/services/information.service';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     HttpClientModule,
