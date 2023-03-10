@@ -1,0 +1,30 @@
+h3 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container-padre {
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    display: inline-table;
+}
+
+.container-title {
+    background-color: red;
+    height: 40px;
+    text-align: center;
+}
+
+.container-img {
+    height: 200px;
+    width: 200px
+}
+img {
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 200px
+}

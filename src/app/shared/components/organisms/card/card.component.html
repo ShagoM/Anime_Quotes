@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem; margin-top: 10px; margin-left:10px ; display: inline-block;" *ngFor="let quoteArray of quotesArray; index as index">
+    <div class="card-body">
+      <h5 class="card-title">{{quoteArray.anime}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{quoteArray.character}}</h6>
+      <hr>
+      <p class="card-text">{{quoteArray.quote}}</p>
+      <app-botton (enviarAction)="eventoEliminar(index)" [type]="'button'" [nameButton]="'Delete'" [kindClass]="'btn btn-danger'"></app-botton>
+    </div>
+  </div>  

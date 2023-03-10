@@ -9,4 +9,5 @@ const routes: Routes = [{ path: '', component: QuotesAnimeComponent }];
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class QuotesAnimeRoutingModule { }

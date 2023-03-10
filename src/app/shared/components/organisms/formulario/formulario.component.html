@@ -1,0 +1,6 @@
+<form  (ngSubmit)="eventoBuscar()" [formGroup]="formulario">
+        <app-control [type]="'text'" [kindClass]="'form-control'" [form]="formulario" [nameLabel]="nameLabel" [id]="id" [inputName]="'buscador'" [textPlaceholder]="placeholder"></app-control>
+        <div class="input-group-append">
+        <app-botton  [type]="'submit'" [nameButton]="'Search'" [kindClass]="'btn btn-outline-primary'"></app-botton>
+    </div>
+</form>

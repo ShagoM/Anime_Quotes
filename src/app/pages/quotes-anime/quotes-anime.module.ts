@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { QuotesAnimeRoutingModule } from './quotes-anime-routing.module';
 import { QuotesAnimeComponent } from './quotes-anime.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ComponentsModule } from 'src/app/shared/components/components.module';
 
 
 
@@ -12,7 +13,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     QuotesAnimeRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule
   ]
 })
 export class QuotesAnimeModule { }

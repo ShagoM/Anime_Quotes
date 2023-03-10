@@ -1,26 +1,15 @@
-<div class="mt-2 mb-2" style="width: 18rem;">
+<div class="mt-2 mb-2" >
     <div class="row">
         <div class="col">
-            <button type="button" class="btn btn-outline-success" (click)="getQuote()">Add</button>
+            <app-botton (enviarAction)="getQuote()" [type]="'button'" [nameButton]="'Add'" [kindClass]="'btn btn-outline-success'"></app-botton>
         </div>
         <div class="col">
-            <button type="button" class="btn btn-outline-danger" (click)="deleteAllQuotes()">Delete All</button>
+           <app-botton (enviarAction)="deleteAllQuotes()" [type]="'button'" [nameButton]="'Delete All'" [kindClass]="'btn btn-outline-danger'"></app-botton>
         </div>
     </div>
-
 </div>
 
-  <h5 *ngIf="!quotesArray.length">No hay frases</h5>
+<h5 *ngIf="!quotesArray.length">No hay frases</h5>
 
-  <div class="card" style="width: 18rem; margin-top: 10px; margin-left:10px ; display: inline-block;" *ngFor="let quoteArray of quotesArray; index as index" >
-    <div class="card-body">
-      <h5 class="card-title">{{ quoteArray.character }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{ quoteArray.anime }} </h6>
-      <hr>
-      <p class="card-text">{{ quoteArray.quote }}</p>
-      <button type="button" class="btn btn-danger" (click)="deleteQuote(index)">Delete</button>
-    </div>
-  </div>  
-
-
+<app-card [quotesArray]="quotesArray" (enviarAction)="deleteQuote($event)" ></app-card>
 
